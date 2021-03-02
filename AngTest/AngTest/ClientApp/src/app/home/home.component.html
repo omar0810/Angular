@@ -1,0 +1,19 @@
+<table>
+  <tr>
+    <td><label> How much I like programming</label></td>
+    <td>
+      <input name="num" type="number"
+             (keypress)="($event.charCode >= 48 && $event.charCode < 58)" />
+    </td>
+
+  </tr>
+  <tr>
+    <td><label>Ways in which I like programming </label></td>
+    <td>
+      <input type="text"[(ngModel)]="MyText" ng-model="Ways" ng-required="myVar" (input)="onChange($event.target.value)">
+    </td>
+  </tr>""
+</table>
+<br />
+ 
+<button [disabled]="!MyText" (ckick)="Button_Clicked()" type="submit">Add Data</button>
